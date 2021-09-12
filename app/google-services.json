@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "919766572578",
+    "project_id": "bajakah-9eb4d",
+    "storage_bucket": "bajakah-9eb4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919766572578:android:db34d4ca1deb35ea3ab47b",
+        "android_client_info": {
+          "package_name": "id.erris.bajakah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919766572578-nvtg3h6jchbott7bqv7jplc5qv4pmk35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3J2eUND2suyYktaacsJFjrjcnI7zz0Po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919766572578-nvtg3h6jchbott7bqv7jplc5qv4pmk35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

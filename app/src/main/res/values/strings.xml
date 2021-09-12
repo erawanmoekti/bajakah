@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Bajakah</string>
+    <string name="description">Belajar bahasa indonesia<br/>melalui pesona Kalimantan Tengah</string>
+    <string name="login">Masuk</string>
+    <string name="welcome">Selamat datang di aplikasi Bajakah</string>
+    <string name="materi_bahasa">Materi Bahasa</string>
+    <string name="bahasa_material">Bahasa Material</string>
+    <string name="menu_utama">Menu Utama</string>
+    <string name="central_kalimantan_culture">Central Kalimantan Culture</string>
+    <string name="budaya_kalimantan_tengah">Budaya Kalimantan Tengah</string>
+    <string name="permainan">Permainan</string>
+    <string name="games">Games</string>
+    <string name="pengingat_waktu">Pengingat Waktu</string>
+    <string name="time_reminder">Time Reminder</string>
+    <string name="kritik_amp_saran"><![CDATA[Kritik & Saran]]></string>
+    <string name="feedback_us">Feedback Us!</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_title_id">Apa itu aplikasi "Bajakah"?</string>
+    <string name="about_us_content_id">Bajakah adalah sebuah program yang merupakan singkatan dari Belajar Bahasa Indonesia melalui Pesona Kalimantan Tengah. Program ini adalah program yang diinisiasikan oleh Duta Bahasa Kalimantan Tengah 2021 untuk mengajar bahasa Indonesia dan memperkenalkan budaya Kalimantan Tengah. Program ini menggunakan bahan ajar berbasis aplikasi yang dapat mempermudah proses belajar-mengajar selama kegiatan.</string>
+    <string name="about_us_title_en">What is "Bajakah" Application?</string>
+    <string name="about_us_content_en">Bajakah is a program that stands for Learning Bahasa Indonesia through Pesona of Central Kalimantan. This program is a program initiated by Central Kalimantan Language Ambassador of 2021 to teach Indonesia language and to introduce the culture of Central Kalimantan. This program uses application-based teaching materials that can simplify the teaching-learning process during the activities.</string>
+</resources>
