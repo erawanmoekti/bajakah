@@ -8,7 +8,7 @@
     tools:context=".activity.MateriBahasaActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tlbEfekSamping"
+        android:id="@+id/tlbMateriBahasa"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/yellow"

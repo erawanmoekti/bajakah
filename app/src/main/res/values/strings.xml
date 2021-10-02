@@ -42,4 +42,8 @@
     <string name="tempat_tanggal_lahir_buntok_13_agustus_2001">Tempat, tanggal lahir : Buntok, 13 Agustus 2001</string>
     <string name="narahubung_winneyamiani_gmail_com">Narahubung: winneyamiani@gmail.com</string>
     <string name="avatar_winney">Avatar Winney</string>
+    <string name="berikan_kritik_saran_pada_kolom_di_bawah_ini"><![CDATA[Berikan kritik & saran pada kolom di bawah ini:]]></string>
+    <string name="kirim">Kirim</string>
+    <string name="email">Email</string>
+    <string name="nama">Nama</string>
 </resources>
