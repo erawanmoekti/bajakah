@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/yellow"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
@@ -28,14 +28,14 @@
                 android:id="@+id/image_header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/image_header"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/background_bajakah"
-                app:layout_collapseMode="parallax"
-                android:contentDescription="@string/image_header" />
+                app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/tlbAboutUs"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:contentInsetStartWithNavigation="0dp"
@@ -65,15 +65,15 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imgAboutUsImageId"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    app:srcCompat="@drawable/flag_id"
-                    android:contentDescription="@string/flag_id" />
+                    android:contentDescription="@string/flag_id"
+                    app:srcCompat="@drawable/flag_id" />
 
                 <View
                     android:id="@+id/view"
@@ -81,14 +81,15 @@
                     android:layout_height="@dimen/spacing_large" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imgAboutUsImageEn"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    app:srcCompat="@drawable/flag_en"
-                    android:contentDescription="@string/flag_en" />
+                    android:contentDescription="@string/flag_en"
+                    app:srcCompat="@drawable/flag_en" />
             </LinearLayout>
 
             <TextView
+                android:id="@+id/lblAboutUsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_medium"
@@ -97,6 +98,7 @@
                 android:textColor="@color/brown" />
 
             <TextView
+                android:id="@+id/lblAboutUsContent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/spacing_large"
@@ -114,11 +116,13 @@
                 android:layout_marginLeft="@dimen/spacing_large"
                 android:layout_marginEnd="@dimen/spacing_large"
                 android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/spacing_medium">
 
                     <TextView
                         android:id="@+id/textView9"
@@ -195,8 +199,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/spacing_large">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/textView14"
@@ -312,7 +315,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium">
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -351,14 +355,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logo"
-        app:layout_anchor="@id/app_bar_layout"
-        app:layout_anchorGravity="bottom|center" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
