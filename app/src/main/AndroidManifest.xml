@@ -21,7 +21,7 @@
         <activity android:name=".activity.ReminderActivity" />
         <activity android:name=".activity.FeedbackActivity" />
         <activity android:name=".activity.AboutUsActivity" />
-        <activity android:name=".activity.SubMenuActivity" />
+        <activity android:name=".activity.MateriBahasaActivity" />
         <activity android:name=".activity.MenuActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>

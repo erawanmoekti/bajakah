@@ -20,4 +20,26 @@
     <string name="about_us_content_id">Bajakah adalah sebuah program yang merupakan singkatan dari Belajar Bahasa Indonesia melalui Pesona Kalimantan Tengah. Program ini adalah program yang diinisiasikan oleh Duta Bahasa Kalimantan Tengah 2021 untuk mengajar bahasa Indonesia dan memperkenalkan budaya Kalimantan Tengah. Program ini menggunakan bahan ajar berbasis aplikasi yang dapat mempermudah proses belajar-mengajar selama kegiatan.</string>
     <string name="about_us_title_en">What is "Bajakah" Application?</string>
     <string name="about_us_content_en">Bajakah is a program that stands for Learning Bahasa Indonesia through Pesona of Central Kalimantan. This program is a program initiated by Central Kalimantan Language Ambassador of 2021 to teach Indonesia language and to introduce the culture of Central Kalimantan. This program uses application-based teaching materials that can simplify the teaching-learning process during the activities.</string>
+    <string name="ukbi_adaptif_merdeka">UKBI Adaptif Merdeka</string>
+    <string name="image_header">Image Header</string>
+    <string name="flag_id">Flag ID</string>
+    <string name="flag_en">Flag EN</string>
+    <string name="central_kalimantan_language_ambassador_2021">(Central Kalimantan Language Ambassador 2021)</string>
+    <string name="sandy_ramadhan">Sandy Ramadhan</string>
+    <string name="nama_panggilan_sandy">Nama panggilan: Sandy</string>
+    <string name="tempat_tanggal_lahir_sampit_13_desember_1999">Tempat, tanggal lahir: Sampit, 13 Desember 1999</string>
+    <string name="narahubung_sandyramadhan59_gmail_com">Narahubung: sandyramadhan59@gmail.com</string>
+    <string name="avatar_sandy">Avatar Sandy</string>
+    <string name="credit">Credit</string>
+    <string name="home_icon_di_desain_oleh_pch_vector_freepik">Home Icon: Di desain oleh pch.vector / Freepik</string>
+    <string name="menu_icon_di_desain_oleh_https_www_vecteezy_com">Menu Icon: Di desain oleh https://www.vecteezy.com/</string>
+    <string name="logo_instagram">Logo Instagram</string>
+    <string name="ikadubas_kalteng">\@ikadubas_kalteng</string>
+    <string name="logo_email">Logo Email</string>
+    <string name="ikadubaskalteng_gmail_com">ikadubaskalteng@gmail.com</string>
+    <string name="winney_amiani">Winney Amiani</string>
+    <string name="nama_panggilan_winney">Nama panggilan: Winney</string>
+    <string name="tempat_tanggal_lahir_buntok_13_agustus_2001">Tempat, tanggal lahir : Buntok, 13 Agustus 2001</string>
+    <string name="narahubung_winneyamiani_gmail_com">Narahubung: winneyamiani@gmail.com</string>
+    <string name="avatar_winney">Avatar Winney</string>
 </resources>

@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import id.erris.bajakah.R;
 
-public class SubMenuActivity extends AppCompatActivity {
+public class MateriBahasaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub_menu);
+        setContentView(R.layout.activity_materi_bahasa);
     }
 }
