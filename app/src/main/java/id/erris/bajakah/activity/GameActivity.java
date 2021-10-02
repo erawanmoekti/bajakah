@@ -23,7 +23,6 @@ public class GameActivity extends AppCompatActivity {
 
     private ActivityGameBinding binding;
     private List<ContentList> contentListst;
-//    private String[] content = {"Kuis 1: Hewan", "Kuis 2: Buah-buahan", "Kuis 3: Alat Tulis Kantor", "Kuis 4: Alat Transportasi", "Kuis 5: Anggota-anggota Tubuh"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

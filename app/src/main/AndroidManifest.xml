@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Bajakah"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity
+            android:name=".activity.MateriBudayaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.KontenMateriActivity"
+            android:exported="true" />
         <activity android:name=".activity.GameActivity" />
         <activity android:name=".activity.ReminderActivity" />
         <activity android:name=".activity.FeedbackActivity" />
