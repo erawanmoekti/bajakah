@@ -2,8 +2,10 @@ package id.erris.bajakah.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 
 import java.util.Objects;
 

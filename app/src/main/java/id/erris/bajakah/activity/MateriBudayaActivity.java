@@ -52,7 +52,7 @@ public class MateriBudayaActivity extends AppCompatActivity {
 
         contentListst.add(new ContentList("1", "Suku dan tarian tradisional", "https://erawan.azurewebsites.net/public/materi/suku_dan_tarian_tradisional.htm"));
         contentListst.add(new ContentList("2", "Wisata", "https://erawan.azurewebsites.net/public/materi/wisata.htm"));
-        contentListst.add(new ContentList("3", "Legenda", "https://erawan.azurewebsites.net/public/materi/legenda.htm"));
+        contentListst.add(new ContentList("3", "Cerita Rakyat", "https://erawan.azurewebsites.net/public/materi/legenda.htm"));
         contentListst.add(new ContentList("4", "Makanan", "https://erawan.azurewebsites.net/public/materi/makanan.htm"));
     }
 

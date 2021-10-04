@@ -43,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
                     startActivity(new Intent(getBaseContext(), MateriBahasaActivity.class));
                     break;
                 case R.id.layMenu2:
-                    startActivity(new Intent(getBaseContext(), MateriBahasaActivity.class));
+                    startActivity(new Intent(getBaseContext(), MateriBudayaActivity.class));
                     break;
                 case R.id.layMenu3:
                     startActivity(new Intent(getBaseContext(), GameActivity.class));
