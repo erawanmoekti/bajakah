@@ -42,6 +42,7 @@
         android:layout_marginRight="@dimen/spacing_large"
         android:gravity="center"
         android:inputType="textMultiLine"
+        android:minHeight="48dp"
         android:paddingLeft="@dimen/spacing_large"
         android:paddingRight="@dimen/spacing_large"
         android:text="@string/description"
@@ -63,5 +64,6 @@
         android:background="@drawable/btn_rounded_primary"
         android:text="@string/login"
         android:textColor="@color/brown"
+        android:visibility="gone"
         app:backgroundTint="@color/yellow_100" />
 </RelativeLayout>

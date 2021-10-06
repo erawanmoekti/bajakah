@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Bajakah</string>
-    <string name="description">Belajar bahasa indonesia<br />melalui pesona Kalimantan Tengah</string>
+    <string name="ip_address">https://erawan.azurewebsites.net/public/api/</string>
+    <string name="description">Belajar bahasa indonesia\nmelalui pesona Kalimantan Tengah</string>
     <string name="login">Masuk</string>
     <string name="welcome">Selamat datang di aplikasi Bajakah</string>
     <string name="materi_bahasa">Materi Bahasa</string>

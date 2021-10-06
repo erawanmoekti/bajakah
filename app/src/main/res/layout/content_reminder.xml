@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_xmedium">
+
+    <TextView
+        android:id="@+id/lblContentReminderWaktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/lblContentReminderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/lblContentReminderWaktu"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/lblContentReminderWaktu" />
+
+    <TextView
+        android:id="@+id/lblContentReminderEn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblContentReminderId"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/lblContentReminderWaktu"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/lblContentReminderWaktu" />
+
+</RelativeLayout>

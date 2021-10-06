@@ -1,13 +1,10 @@
 package id.erris.bajakah.model;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import java.sql.Time;
+import java.util.UUID;
 
 public class Reminder {
-    public int id;
+    public UUID id;
     public String keteranganId;
     public String keteranganEn;
     public Time waktu;
@@ -19,7 +16,7 @@ public class Reminder {
     public boolean friday;
     public boolean saturday;
 
-    public Reminder(int id, String keteranganId, String keteranganEn, Time waktu, boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday, boolean friday, boolean saturday) {
+    public Reminder(UUID id, String keteranganId, String keteranganEn, Time waktu, boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday, boolean friday, boolean saturday) {
         this.id = id;
         this.keteranganId = keteranganId;
         this.keteranganEn = keteranganEn;
@@ -33,11 +30,11 @@ public class Reminder {
         this.saturday = saturday;
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
