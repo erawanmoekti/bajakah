@@ -44,6 +44,11 @@ public class ReminderActivity extends AppCompatActivity {
 
         initializeToolbar();
         initializeRecycler();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         loadData();
     }
 
@@ -102,6 +107,7 @@ public class ReminderActivity extends AppCompatActivity {
                     public void onComplete() {
                         loadingDialog.dismiss();
 
+                        PreferenceUtil.setReminder(getBaseContext(), reminderList);
                         adapter = new ReminderAdapter(getBaseContext(), reminderList);
                         binding.rcvReminder.setAdapter(adapter);
                     }

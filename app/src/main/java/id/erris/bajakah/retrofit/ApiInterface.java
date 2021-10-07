@@ -69,8 +69,8 @@ public interface ApiInterface {
     @POST("feedback/create")
     Observable<SaveResponse> createFeedback(
             @Field("user_id") String userId,
-            @Field("keterangan_id") String nama,
-            @Field("keterangan_en") String email,
+            @Field("nama") String nama,
+            @Field("email") String email,
             @Field("saran") String saran
     );
 

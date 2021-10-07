@@ -34,7 +34,7 @@ public class PreferenceUtil {
         setStringPreference(context, USER_REMINDER_PREF, reminderJson);
     }
 
-    public static @Nullable Reminder getReminder(Context context) {
+    public static @Nullable List<Reminder> getReminder(Context context) {
         Gson gson = new Gson();
         String reminderJson = getStringPreference(context, USER_REMINDER_PREF, "");
 

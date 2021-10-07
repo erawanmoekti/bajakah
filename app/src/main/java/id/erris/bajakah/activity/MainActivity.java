@@ -1,10 +1,15 @@
 package id.erris.bajakah.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
 import android.app.Dialog;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +17,7 @@ import android.view.View;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,6 +26,8 @@ import id.erris.bajakah.model.Reminder;
 import id.erris.bajakah.response.RegisterResponse;
 import id.erris.bajakah.retrofit.ApiClient;
 import id.erris.bajakah.retrofit.ApiInterface;
+import id.erris.bajakah.service.ReminderBroadcast;
+import id.erris.bajakah.service.ReminderService;
 import id.erris.bajakah.utils.PreferenceUtil;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -33,12 +41,15 @@ public class MainActivity extends AppCompatActivity {
     private boolean result;
     private String message;
     private List<Reminder> data;
+    private ReminderService reminderService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        reminderService = new ReminderService(getBaseContext());
 
         initializeResources();
         initializeUser();
@@ -48,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
         if (PreferenceUtil.getId(getBaseContext()).equals("")) {
             doRegister();
         } else {
+            List<Reminder> reminderList = PreferenceUtil.getReminder(getBaseContext());
+            for(Reminder reminder : reminderList)
+                reminderService.createReminder(reminder);
+
             binding.btnMainLogin.setVisibility(View.VISIBLE);
         }
     }
@@ -81,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onError(Throwable e) {
+                    public void onError(@NonNull Throwable e) {
                         loadingDialog.dismiss();
                         Snackbar.make(binding.getRoot(), "Terjadi kesalahan, silahkan ulangi beberapa saat lagi", Snackbar.LENGTH_SHORT).show();
                         Log.d("REGISTER_ERROR", e.getMessage());
@@ -94,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
                         if ( result ) {
                             PreferenceUtil.setId(getBaseContext(), id);
                             PreferenceUtil.setReminder(getBaseContext(), data);
+
+                            for (Reminder reminder : data) {
+                                reminderService.createReminder(reminder);
+                            }
                             binding.btnMainLogin.setVisibility(View.VISIBLE);
                         } else {
                             Snackbar.make(binding.getRoot(), message, Snackbar.LENGTH_SHORT).show();
