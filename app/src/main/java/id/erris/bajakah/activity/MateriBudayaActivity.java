@@ -48,12 +48,13 @@ public class MateriBudayaActivity extends AppCompatActivity {
     }
 
     private void loadData() {
+        String url = getString(R.string.ip_address_materi);
         contentListst = new ArrayList<>();
 
-        contentListst.add(new ContentList("1", "Suku dan tarian tradisional", "https://erawan.azurewebsites.net/public/materi/suku_dan_tarian_tradisional.htm"));
-        contentListst.add(new ContentList("2", "Wisata", "https://erawan.azurewebsites.net/public/materi/wisata.htm"));
-        contentListst.add(new ContentList("3", "Cerita Rakyat", "https://erawan.azurewebsites.net/public/materi/legenda.htm"));
-        contentListst.add(new ContentList("4", "Makanan", "https://erawan.azurewebsites.net/public/materi/makanan.htm"));
+        contentListst.add(new ContentList("1", "Suku dan tarian tradisional", url + "suku_dan_tarian_tradisional.pdf"));
+        contentListst.add(new ContentList("2", "Wisata", url + "wisata.pdf"));
+        contentListst.add(new ContentList("3", "Cerita Rakyat", url + "legenda.pdf"));
+        contentListst.add(new ContentList("4", "Makanan", url + "makanan.pdf"));
     }
 
     private void initializeResources() {

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Bajakah</string>
     <string name="ip_address">https://erawan.azurewebsites.net/public/api/</string>
+<!--    <string name="ip_address_materi">https://erawan.azurewebsites.net/public/materi/</string>-->
+    <string name="ip_address_materi">http://192.168.0.51:8000/materi/</string>
     <string name="description">Belajar Bahasa Indonesia\nmelalui Pesona Kalimantan Tengah</string>
     <string name="login">Masuk</string>
     <string name="welcome">Selamat datang di aplikasi Bajakah</string>
@@ -10,7 +12,7 @@
     <string name="central_kalimantan_culture">Central Kalimantan Culture</string>
     <string name="budaya_kalimantan_tengah">Budaya Kalimantan Tengah</string>
     <string name="permainan">Teka-Teki Silang</string>
-    <string name="games">Crossword</string>
+    <string name="games">Crossword Puzzle</string>
     <string name="pengingat_waktu">Pengingat Waktu</string>
     <string name="time_reminder">Time Reminder</string>
     <string name="kritik_amp_saran"><![CDATA[Kritik & Saran]]></string>
