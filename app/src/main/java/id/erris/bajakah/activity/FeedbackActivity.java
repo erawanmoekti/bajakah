@@ -2,8 +2,11 @@ package id.erris.bajakah.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,15 +14,29 @@ import android.view.WindowManager;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.UUID;
 
 import id.erris.bajakah.R;
 import id.erris.bajakah.databinding.ActivityAboutUsBinding;
 import id.erris.bajakah.databinding.ActivityFeedbackBinding;
+import id.erris.bajakah.response.RegisterResponse;
+import id.erris.bajakah.response.SaveResponse;
+import id.erris.bajakah.retrofit.ApiClient;
+import id.erris.bajakah.retrofit.ApiInterface;
+import id.erris.bajakah.utils.PreferenceUtil;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class FeedbackActivity extends AppCompatActivity {
 
     private ActivityFeedbackBinding binding;
+    private Dialog loadingDialog;
+    private boolean result;
+    private String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +70,53 @@ public class FeedbackActivity extends AppCompatActivity {
             String kritik = binding.txtFeedbackKritik.getText().toString();
 
             if ( validateNama(nama) && validateEmail(email) && validateKritik(kritik) ) {
-                Snackbar.make(binding.getRoot(), "Kritik & saran berhasil dikirim", Snackbar.LENGTH_SHORT).show();
-                finish();
+                doSendFeedback(PreferenceUtil.getId(getBaseContext()), nama, email, kritik);
             }
         });
+    }
+
+    private void doSendFeedback(String id, String nama, String email, String kritik) {
+        loadingDialog = ProgressDialog.show(FeedbackActivity.this, "Mohon tunggu", "Mengirim Saran");
+        loadingDialog.setCanceledOnTouchOutside(true);
+
+        ApiInterface apiInterface = ApiClient.getClient(getBaseContext()).create(ApiInterface.class);
+        apiInterface.createFeedback(id, nama, email, kritik)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .unsubscribeOn(Schedulers.io())
+                .subscribe(new Observer<SaveResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        Log.d("Send Feedback", "Subscribe Start");
+                    }
+
+                    @Override
+                    public void onNext(SaveResponse response) {
+                        result = response.getResult();
+                        message = response.getMessage();
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        loadingDialog.dismiss();
+                        Snackbar.make(binding.getRoot(), "Terjadi kesalahan, silahkan ulangi beberapa saat lagi", Snackbar.LENGTH_SHORT).show();
+                        Log.d("SENDFEEDBACK_ERROR", e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        loadingDialog.dismiss();
+
+                        if ( result ) {
+                            Snackbar.make(binding.getRoot(), "Terima kasih, kritik & saran anda berhasil dikirim", Snackbar.LENGTH_SHORT).show();
+                            binding.txtFeedbackNama.setText("");
+                            binding.txtFeedbackEmail.setText("");
+                            binding.txtFeedbackKritik.setText("");
+                        } else {
+                            Snackbar.make(binding.getRoot(), message, Snackbar.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     private boolean validateNama(String nama) {

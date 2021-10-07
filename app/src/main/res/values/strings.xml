@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Bajakah</string>
     <string name="ip_address">https://erawan.azurewebsites.net/public/api/</string>
-<!--    <string name="ip_address_materi">https://erawan.azurewebsites.net/public/materi/</string>-->
-    <string name="ip_address_materi">http://192.168.0.51:8000/materi/</string>
+    <string name="ip_address_materi">https://erawan.azurewebsites.net/public/materi/</string>
+<!--    <string name="ip_address_materi">http://192.168.0.51:8000/materi/</string>-->
     <string name="description">Belajar Bahasa Indonesia\nmelalui Pesona Kalimantan Tengah</string>
     <string name="login">Masuk</string>
     <string name="welcome">Selamat datang di aplikasi Bajakah</string>

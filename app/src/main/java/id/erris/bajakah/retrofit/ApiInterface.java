@@ -44,7 +44,6 @@ public interface ApiInterface {
             @Field("saturday") boolean saturday
     );
 
-
     @FormUrlEncoded
     @PUT("reminder/{id}")
     Observable<SaveResponse> updateReminder(
@@ -65,4 +64,14 @@ public interface ApiInterface {
     Observable<SaveResponse> deleteReminder(
             @Path("id") String id
     );
+
+    @FormUrlEncoded
+    @POST("feedback/create")
+    Observable<SaveResponse> createFeedback(
+            @Field("user_id") String userId,
+            @Field("keterangan_id") String nama,
+            @Field("keterangan_en") String email,
+            @Field("saran") String saran
+    );
+
 }
