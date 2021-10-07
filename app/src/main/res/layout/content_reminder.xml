@@ -48,8 +48,16 @@
         android:layout_below="@id/lblContentReminderId"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/spacing_medium"
         android:layout_toEndOf="@id/layContentReminderWaktu"
         android:layout_toRightOf="@id/layContentReminderWaktu"
         android:text="keterangan en" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblContentReminderEn"
+        app:srcCompat="@color/grey_100" />
 
 </RelativeLayout>

@@ -51,12 +51,13 @@ public class MateriBahasaActivity extends AppCompatActivity {
     private void loadData() {
         contentListst = new ArrayList<>();
 
-        contentListst.add(new ContentList("1", "Alfabet, Angka & Warna", "https://erawan.azurewebsites.net/public/materi/alfabet_angka_warna.htm"));
-        contentListst.add(new ContentList("2", "Perkenalan", "https://erawan.azurewebsites.net/public/materi/perkenalan.htm"));
-        contentListst.add(new ContentList("3", "Pertanyaan, Sapa, Respons", "https://erawan.azurewebsites.net/public/materi/pertanyaan_sapa_respons.htm"));
-        contentListst.add(new ContentList("4", "Keluarga dan karakter tubuh", "https://erawan.azurewebsites.net/public/materi/keluarga_dan_karakter_tubuh.htm"));
-        contentListst.add(new ContentList("5", "Waktu hari tanggal bulan", "https://erawan.azurewebsites.net/public/materi/waktu_hari_tanggal_bulan.htm"));
-        contentListst.add(new ContentList("6", "Aktivitas sehari-hari", "https://erawan.azurewebsites.net/public/materi/aktivitas_sehari_hari.htm"));
+        contentListst.add(new ContentList("1", "Standard Kompetensi", "https://erawan.azurewebsites.net/public/materi/standar_kompetensi.htm"));
+        contentListst.add(new ContentList("2", "Alfabet, Angka & Warna", "https://erawan.azurewebsites.net/public/materi/alfabet_angka_warna.htm"));
+        contentListst.add(new ContentList("3", "Perkenalan", "https://erawan.azurewebsites.net/public/materi/perkenalan.htm"));
+        contentListst.add(new ContentList("4", "Pertanyaan, Sapa, Respons", "https://erawan.azurewebsites.net/public/materi/pertanyaan_sapa_respons.htm"));
+        contentListst.add(new ContentList("5", "Keluarga dan karakter tubuh", "https://erawan.azurewebsites.net/public/materi/keluarga_dan_karakter_tubuh.htm"));
+        contentListst.add(new ContentList("6", "Waktu hari tanggal bulan", "https://erawan.azurewebsites.net/public/materi/waktu_hari_tanggal_bulan.htm"));
+        contentListst.add(new ContentList("7", "Aktivitas sehari-hari", "https://erawan.azurewebsites.net/public/materi/aktivitas_sehari_hari.htm"));
     }
 
     private void initializeResources() {

@@ -57,7 +57,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
             lblKeteranganId = itemView.findViewById(R.id.lblContentReminderId);
             lblKeteranganEn = itemView.findViewById(R.id.lblContentReminderEn);
 
-            itemView.setOnClickListener(v -> {
+            /*itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(context, FormReminderActivity.class);
                 intent.putExtra("id", data.get(getAdapterPosition()).getId().toString());
                 intent.putExtra("keteranganId", data.get(getAdapterPosition()).getKeteranganId());
@@ -72,7 +72,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
                 intent.putExtra("saturday", data.get(getAdapterPosition()).isSaturday());
 
                 context.startActivity(intent);
-            });
+            });*/
         }
     }
 }
