@@ -1,13 +1,12 @@
 package id.erris.bajakah.model;
 
-import java.sql.Time;
 import java.util.UUID;
 
 public class Reminder {
     public UUID id;
-    public String keteranganId;
-    public String keteranganEn;
-    public Time waktu;
+    public String keterangan_id;
+    public String keterangan_en;
+    public String jam;
     public boolean sunday;
     public boolean monday;
     public boolean tuesday;
@@ -16,11 +15,11 @@ public class Reminder {
     public boolean friday;
     public boolean saturday;
 
-    public Reminder(UUID id, String keteranganId, String keteranganEn, Time waktu, boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday, boolean friday, boolean saturday) {
+    public Reminder(UUID id, String keterangan_id, String keterangan_en, String jam, boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday, boolean friday, boolean saturday) {
         this.id = id;
-        this.keteranganId = keteranganId;
-        this.keteranganEn = keteranganEn;
-        this.waktu = waktu;
+        this.keterangan_id = keterangan_id;
+        this.keterangan_en = keterangan_en;
+        this.jam = jam;
         this.sunday = sunday;
         this.monday = monday;
         this.tuesday = tuesday;
@@ -39,27 +38,27 @@ public class Reminder {
     }
 
     public String getKeteranganId() {
-        return keteranganId;
+        return keterangan_id;
     }
 
-    public void setKeteranganId(String keteranganId) {
-        this.keteranganId = keteranganId;
+    public void setKeteranganId(String keterangan_id) {
+        this.keterangan_id = keterangan_id;
     }
 
     public String getKeteranganEn() {
-        return keteranganEn;
+        return keterangan_en;
     }
 
-    public void setKeteranganEn(String keteranganEn) {
-        this.keteranganEn = keteranganEn;
+    public void setKeteranganEn(String keterangan_en) {
+        this.keterangan_en = keterangan_en;
     }
 
-    public Time getWaktu() {
-        return waktu;
+    public String getJam() {
+        return jam;
     }
 
-    public void setWaktu(Time waktu) {
-        this.waktu = waktu;
+    public void setJam(String jam) {
+        this.jam = jam;
     }
 
     public boolean isSunday() {

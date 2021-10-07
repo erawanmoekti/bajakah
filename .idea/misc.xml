@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_about_us.xml" value="0.22" />
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_feedback.xml" value="0.22" />
+        <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_form_reminder.xml" value="0.22864583333333333" />
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_game.xml" value="0.1" />
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_konten_materi.xml" value="0.21145833333333333" />
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -12,7 +13,8 @@
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_materi_bahasa.xml" value="0.22864583333333333" />
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_materi_budaya.xml" value="0.22864583333333333" />
         <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_menu.xml" value="0.4466666666666667" />
-        <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/content_reminder.xml" value="0.22864583333333333" />
+        <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/activity_reminder.xml" value="0.22864583333333333" />
+        <entry key="..\:/Dropbox/Kerjaan/Skripsi/Unair/Bajakah/Project/Android/app/src/main/res/layout/content_reminder.xml" value="0.8" />
       </map>
     </option>
   </component>

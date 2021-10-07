@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".activity.FormReminderActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.MateriBudayaActivity"
             android:exported="true" />
         <activity

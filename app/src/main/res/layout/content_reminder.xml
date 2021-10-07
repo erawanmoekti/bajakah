@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/spacing_xmedium">
 
-    <TextView
-        android:id="@+id/lblContentReminderWaktu"
+    <LinearLayout
+        android:id="@+id/layContentReminderWaktu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-        android:layout_alignParentStart="true" />
+        android:layout_marginEnd="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_av_timer_24"
+            app:tint="@color/brown" />
+
+        <TextView
+            android:id="@+id/lblContentReminderWaktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18:00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/lblContentReminderId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/lblContentReminderWaktu"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@id/lblContentReminderWaktu" />
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@id/layContentReminderWaktu"
+        android:layout_toRightOf="@id/layContentReminderWaktu"
+        android:text="keterangan id" />
 
     <TextView
         android:id="@+id/lblContentReminderEn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblContentReminderId"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/lblContentReminderWaktu"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@id/lblContentReminderWaktu" />
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@id/layContentReminderWaktu"
+        android:layout_toRightOf="@id/layContentReminderWaktu"
+        android:text="keterangan en" />
 
 </RelativeLayout>
