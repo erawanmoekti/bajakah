@@ -15,6 +15,7 @@ import id.erris.bajakah.R;
 import id.erris.bajakah.databinding.ActivityMateriBahasaBinding;
 import id.erris.bajakah.databinding.ActivityMateriBudayaBinding;
 import id.erris.bajakah.model.ContentList;
+import id.erris.bajakah.utils.Constants;
 
 public class MateriBudayaActivity extends AppCompatActivity {
 
@@ -63,8 +64,8 @@ public class MateriBudayaActivity extends AppCompatActivity {
 
         binding.lvMateriBudaya.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(getBaseContext(), KontenMateriActivity.class);
-            intent.putExtra("url", String.valueOf(contentListst.get(position).getUrl()));
-            intent.putExtra("judul", String.valueOf(contentListst.get(position).getName()));
+            intent.putExtra(Constants.MATERI_URL, String.valueOf(contentListst.get(position).getUrl()));
+            intent.putExtra(Constants.MATERI_JUDUL, String.valueOf(contentListst.get(position).getName()));
             startActivity(intent);
         });
     }

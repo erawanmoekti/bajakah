@@ -15,6 +15,7 @@ import java.util.List;
 import id.erris.bajakah.R;
 import id.erris.bajakah.activity.FormReminderActivity;
 import id.erris.bajakah.model.Reminder;
+import id.erris.bajakah.utils.Constants;
 
 public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHolder> {
     private Context context;
@@ -57,22 +58,23 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
             lblKeteranganId = itemView.findViewById(R.id.lblContentReminderId);
             lblKeteranganEn = itemView.findViewById(R.id.lblContentReminderEn);
 
-            /*itemView.setOnClickListener(v -> {
+            itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(context, FormReminderActivity.class);
-                intent.putExtra("id", data.get(getAdapterPosition()).getId().toString());
-                intent.putExtra("keteranganId", data.get(getAdapterPosition()).getKeteranganId());
-                intent.putExtra("keteranganEn", data.get(getAdapterPosition()).getKeteranganEn());
-                intent.putExtra("waktu", data.get(getAdapterPosition()).getJam().toString());
-                intent.putExtra("sunday", data.get(getAdapterPosition()).isSunday());
-                intent.putExtra("monday", data.get(getAdapterPosition()).isMonday());
-                intent.putExtra("tuesday", data.get(getAdapterPosition()).isTuesday());
-                intent.putExtra("wednesday", data.get(getAdapterPosition()).isWednesday());
-                intent.putExtra("thursday", data.get(getAdapterPosition()).isThursday());
-                intent.putExtra("friday", data.get(getAdapterPosition()).isFriday());
-                intent.putExtra("saturday", data.get(getAdapterPosition()).isSaturday());
+                intent.putExtra(Constants.REMINDER_ID, data.get(getAdapterPosition()).getId().toString());
+                intent.putExtra(Constants.REMINDER_KETERANGAN_ID, data.get(getAdapterPosition()).getKeteranganId());
+                intent.putExtra(Constants.REMINDER_KETERANGAN_EN, data.get(getAdapterPosition()).getKeteranganEn());
+                intent.putExtra(Constants.REMINDER_WAKTU, data.get(getAdapterPosition()).getJam().toString());
+                intent.putExtra(Constants.REMINDER_SUNDAY, data.get(getAdapterPosition()).isSunday());
+                intent.putExtra(Constants.REMINDER_MONDAY, data.get(getAdapterPosition()).isMonday());
+                intent.putExtra(Constants.REMINDER_TUESDAY, data.get(getAdapterPosition()).isTuesday());
+                intent.putExtra(Constants.REMINDER_WEDNESDAY, data.get(getAdapterPosition()).isWednesday());
+                intent.putExtra(Constants.REMINDER_THURSDAY, data.get(getAdapterPosition()).isThursday());
+                intent.putExtra(Constants.REMINDER_FRIDAY, data.get(getAdapterPosition()).isFriday());
+                intent.putExtra(Constants.REMINDER_SATURDAY, data.get(getAdapterPosition()).isSaturday());
+                intent.putExtra(Constants.REMINDER_STATUS, "ubah");
 
                 context.startActivity(intent);
-            });*/
+            });
         }
     }
 }

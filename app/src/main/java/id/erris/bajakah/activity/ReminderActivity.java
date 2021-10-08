@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ import id.erris.bajakah.model.Reminder;
 import id.erris.bajakah.response.ReminderResponse;
 import id.erris.bajakah.retrofit.ApiClient;
 import id.erris.bajakah.retrofit.ApiInterface;
+import id.erris.bajakah.utils.Constants;
 import id.erris.bajakah.utils.PreferenceUtil;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -32,7 +34,6 @@ public class ReminderActivity extends AppCompatActivity {
 
     private ActivityReminderBinding binding;
     private Dialog loadingDialog;
-    private boolean result;
     private List<Reminder> reminderList;
     private ReminderAdapter adapter;
 
@@ -44,6 +45,7 @@ public class ReminderActivity extends AppCompatActivity {
 
         initializeToolbar();
         initializeRecycler();
+        initializeResources();
     }
 
     @Override
@@ -98,7 +100,9 @@ public class ReminderActivity extends AppCompatActivity {
                     @Override
                     public void onError(Throwable e) {
                         loadingDialog.dismiss();
-                        Snackbar.make(binding.getRoot(), "Terjadi kesalahan, silahkan ulangi lagi", Snackbar.LENGTH_SHORT).show();
+                        reminderList = PreferenceUtil.getReminder(getBaseContext());
+                        adapter = new ReminderAdapter(getBaseContext(), reminderList);
+                        binding.rcvReminder.setAdapter(adapter);
 
                         Log.d("LOAD_REMINDER_ERROR", e.getMessage());
                     }
@@ -112,5 +116,13 @@ public class ReminderActivity extends AppCompatActivity {
                         binding.rcvReminder.setAdapter(adapter);
                     }
                 });
+    }
+
+    private void initializeResources() {
+        binding.fabReminder.setOnClickListener(v -> {
+            Intent intent = new Intent(getBaseContext(), FormReminderActivity.class);
+            intent.putExtra(Constants.REMINDER_STATUS, "rekam");
+            startActivity(intent);
+        });
     }
 }

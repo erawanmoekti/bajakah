@@ -25,6 +25,7 @@ import id.erris.bajakah.response.RegisterResponse;
 import id.erris.bajakah.response.SaveResponse;
 import id.erris.bajakah.retrofit.ApiClient;
 import id.erris.bajakah.retrofit.ApiInterface;
+import id.erris.bajakah.utils.ActivityUtil;
 import id.erris.bajakah.utils.PreferenceUtil;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -122,7 +123,7 @@ public class FeedbackActivity extends AppCompatActivity {
     private boolean validateNama(String nama) {
         if ( nama.isEmpty() ) {
             Snackbar.make(binding.getRoot(), "Kolom nama tidak boleh kosong", Snackbar.LENGTH_SHORT).show();
-            requestFocus(binding.txtFeedbackNama);
+            ActivityUtil.requestFocus(this, binding.txtFeedbackNama);
             return false;
         }
 
@@ -132,13 +133,13 @@ public class FeedbackActivity extends AppCompatActivity {
     private boolean validateEmail(String email) {
         if ( email.isEmpty() ) {
             Snackbar.make(binding.getRoot(), "Kolom email tidak boleh kosong", Snackbar.LENGTH_SHORT).show();
-            requestFocus(binding.txtFeedbackEmail);
+            ActivityUtil.requestFocus(this, binding.txtFeedbackEmail);
             return false;
         }
 
         if ( !isValidEmail(email) ) {
             Snackbar.make(binding.getRoot(), "Format email salah. Silahkan periksa kembali", Snackbar.LENGTH_SHORT).show();
-            requestFocus(binding.txtFeedbackEmail);
+            ActivityUtil.requestFocus(this, binding.txtFeedbackEmail);
             return false;
         }
 
@@ -152,17 +153,10 @@ public class FeedbackActivity extends AppCompatActivity {
     private boolean validateKritik(String kritik) {
         if ( kritik.isEmpty() ) {
             Snackbar.make(binding.getRoot(), "Kolom kritik & saran tidak boleh kosong", Snackbar.LENGTH_SHORT).show();
-            requestFocus(binding.txtFeedbackKritik);
+            ActivityUtil.requestFocus(this, binding.txtFeedbackKritik);
             return false;
         }
 
         return true;
     }
-
-    private void requestFocus(View view) {
-        if ( view.requestFocus() ) {
-            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-        }
-    }
-
 }

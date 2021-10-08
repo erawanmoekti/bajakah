@@ -49,4 +49,16 @@
     <string name="kirim">Kirim</string>
     <string name="email">Email</string>
     <string name="nama">Nama</string>
+    <string name="isi_pesan_id">Isi Pesan (ID)</string>
+    <string name="isi_pesan_en">Isi Pesan (EN)</string>
+    <string name="jam">Jam</string>
+    <string name="ulangi_pengingat">Ulangi Pengingat</string>
+    <string name="senin">Senin</string>
+    <string name="selasa">Selasa</string>
+    <string name="rabu">Rabu</string>
+    <string name="kamis">Kamis</string>
+    <string name="jumat">Jumat</string>
+    <string name="sabtu">Sabtu</string>
+    <string name="minggu">Minggu</string>
+    <string name="simpan">Simpan</string>
 </resources>

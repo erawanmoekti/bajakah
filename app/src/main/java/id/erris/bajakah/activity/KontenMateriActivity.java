@@ -30,6 +30,7 @@ import java.util.UUID;
 import id.erris.bajakah.R;
 import id.erris.bajakah.databinding.ActivityKontenMateriBinding;
 import id.erris.bajakah.databinding.ActivityMateriBahasaBinding;
+import id.erris.bajakah.utils.Constants;
 import id.erris.bajakah.utils.FileUtil;
 
 public class KontenMateriActivity extends AppCompatActivity {
@@ -118,8 +119,8 @@ public class KontenMateriActivity extends AppCompatActivity {
 
     private void getExtra() {
         Bundle extras = getIntent().getExtras();
-        url = extras.getString("url");
-        judul = extras.getString("judul");
+        url = extras.getString(Constants.MATERI_URL);
+        judul = extras.getString(Constants.MATERI_JUDUL);
     }
 
     private void initializeResources() {
