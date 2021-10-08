@@ -23,6 +23,7 @@ import id.erris.bajakah.model.Reminder;
 import id.erris.bajakah.response.ReminderResponse;
 import id.erris.bajakah.retrofit.ApiClient;
 import id.erris.bajakah.retrofit.ApiInterface;
+import id.erris.bajakah.service.ReminderService;
 import id.erris.bajakah.utils.Constants;
 import id.erris.bajakah.utils.PreferenceUtil;
 import io.reactivex.Observer;
@@ -36,12 +37,15 @@ public class ReminderActivity extends AppCompatActivity {
     private Dialog loadingDialog;
     private List<Reminder> reminderList;
     private ReminderAdapter adapter;
+    private ReminderService reminderService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityReminderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        reminderService = new ReminderService(getBaseContext());
 
         initializeToolbar();
         initializeRecycler();
@@ -114,6 +118,10 @@ public class ReminderActivity extends AppCompatActivity {
                         PreferenceUtil.setReminder(getBaseContext(), reminderList);
                         adapter = new ReminderAdapter(getBaseContext(), reminderList);
                         binding.rcvReminder.setAdapter(adapter);
+
+                        for (Reminder reminder : reminderList) {
+                            reminderService.createReminder(reminder);
+                        }
                     }
                 });
     }
