@@ -41,15 +41,15 @@ public class ReminderBroadcast extends BroadcastReceiver {
 
     private Context myContext;
     private String notificationId, messageId, messageEn;
-    private int jam, menit;
+    private String jam, menit;
     private boolean repeatSunday, repeatMonday, repeatTuesday, repeatWednesday, repeatThursday, repeatFriday,repeatSaturday;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         myContext = context;
         notificationId = intent.getStringExtra(NOTIFICATION_ID);
-        jam = intent.getIntExtra(JAM_ALARM, 0);
-        menit = intent.getIntExtra(MENIT_ALARM, 0);
+        jam = intent.getStringExtra(JAM_ALARM);
+        menit = intent.getStringExtra(MENIT_ALARM);
         messageId = intent.getStringExtra(NOTIFICATION_MESSAGE_ID);
         messageEn = intent.getStringExtra(NOTIFICATION_MESSAGE_EN);
         repeatSunday = intent.getBooleanExtra(REPEAT_SUNDAY, false);
@@ -132,8 +132,12 @@ public class ReminderBroadcast extends BroadcastReceiver {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, jam);
-        calendar.set(Calendar.MINUTE, menit);
+        calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(jam));
+        calendar.set(Calendar.MINUTE, Integer.parseInt(menit));
+
+        if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
+            calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
+        }
 
         AlarmManager alarmManager = (AlarmManager) myContext.getSystemService(Context.ALARM_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
