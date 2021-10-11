@@ -109,6 +109,27 @@
                 android:text="@string/about_us_content_id"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
 
+            <TextView
+                android:id="@+id/lblAboutLogoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/about_logo_title_id"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@color/brown" />
+
+            <TextView
+                android:id="@+id/lblAboutLogoContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:gravity="center"
+                android:text="@string/about_logo_content_id"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -137,7 +158,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/lblAboutSloganSandy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView9"
@@ -145,14 +166,14 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginBottom="@dimen/spacing_medium"
                         android:gravity="center"
-                        android:text="@string/central_kalimantan_language_ambassador_2021"
+                        android:text="@string/duta_bahasa_kalimantan_tengah_2021"
                         android:textColor="@color/brown"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_below="@id/textView10"
+                        android:layout_below="@id/lblAboutSloganSandy"
                         android:layout_alignParentLeft="true"
                         android:layout_marginEnd="@dimen/spacing_xmedium"
                         android:layout_marginRight="@dimen/spacing_xmedium"
@@ -162,26 +183,26 @@
                         android:layout_toStartOf="@id/imageView7">
 
                         <TextView
-                            android:id="@+id/textView13"
+                            android:id="@+id/lblAboutNamaSandy"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/spacing_medium"
-                            android:text="@string/nama_panggilan_sandy"
+                            android:text="@string/nama_panggilan_sandy_id"
                             android:textColor="@color/black" />
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/lblAboutTtlSandy"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/spacing_medium"
-                            android:text="@string/tempat_tanggal_lahir_sampit_13_desember_1999"
+                            android:text="@string/tempat_tanggal_lahir_sandy_id"
                             android:textColor="@color/black" />
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:id="@+id/lblAboutEmailSandy"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/narahubung_sandyramadhan59_gmail_com"
+                            android:text="@string/pos_el_sandy_id"
                             android:textColor="@color/black" />
                     </LinearLayout>
 
@@ -189,12 +210,12 @@
                         android:id="@+id/imageView7"
                         android:layout_width="96dp"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/textView10"
+                        android:layout_below="@id/lblAboutSloganSandy"
+                        android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:scaleType="fitCenter"
-                        tools:srcCompat="@tools:sample/avatars"
                         android:contentDescription="@string/avatar_sandy"
-                        android:layout_alignParentEnd="true" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/sandy" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -214,14 +235,14 @@
                         android:layout_alignParentStart="true" />
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/lblAboutSloganWinney"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView14"
                         android:layout_alignParentLeft="true"
                         android:layout_marginBottom="@dimen/spacing_medium"
                         android:gravity="center"
-                        android:text="@string/central_kalimantan_language_ambassador_2021"
+                        android:text="@string/duta_bahasa_kalimantan_tengah_2021"
                         android:textColor="@color/brown"
                         android:textStyle="bold"
                         android:layout_alignParentStart="true" />
@@ -229,7 +250,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_below="@id/textView15"
+                        android:layout_below="@id/lblAboutSloganWinney"
                         android:layout_alignParentLeft="true"
                         android:layout_marginEnd="@dimen/spacing_xmedium"
                         android:layout_marginRight="@dimen/spacing_xmedium"
@@ -239,27 +260,27 @@
                         android:layout_toStartOf="@id/imageView8">
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/lblAboutNamaWinney"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/spacing_medium"
                             android:textColor="@color/black"
-                            android:text="@string/nama_panggilan_winney" />
+                            android:text="@string/nama_panggilan_winney_id" />
 
                         <TextView
-                            android:id="@+id/textView17"
+                            android:id="@+id/lblAboutTtlWinney"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/spacing_medium"
                             android:textColor="@color/black"
-                            android:text="@string/tempat_tanggal_lahir_buntok_13_agustus_2001" />
+                            android:text="@string/tempat_tanggal_lahir_winney_id" />
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:id="@+id/lblAboutEmailWinney"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
-                            android:text="@string/narahubung_winneyamiani_gmail_com" />
+                            android:text="@string/pos_el_winney_id" />
                     </LinearLayout>
 
                     <ImageView
@@ -267,11 +288,11 @@
                         android:layout_width="96dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView15"
+                        android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:scaleType="fitCenter"
-                        tools:srcCompat="@tools:sample/avatars"
                         android:contentDescription="@string/avatar_winney"
-                        android:layout_alignParentEnd="true" />
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/winney" />
                 </RelativeLayout>
             </LinearLayout>
 
